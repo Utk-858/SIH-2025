@@ -29,6 +29,15 @@ export default function ResultPage() {
     },
   ];
 
+  // Overall AI summary
+  const overallTips = `
+    You have excellent core endurance, solid leg power, and good agility. 
+    To maximize performance, balance strength and conditioning:
+    • Add HIIT workouts twice a week. 
+    • Focus on recovery (stretching, mobility drills). 
+    • Track progress monthly to adjust training intensity.
+  `;
+
   return (
     <div className="container max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="space-y-8 flex flex-col items-center">
@@ -70,6 +79,19 @@ export default function ResultPage() {
             </CardContent>
           </Card>
         ))}
+
+        {/* Overall AI Coaching Summary */}
+        <Card className="w-full max-w-2xl bg-primary/10 border-primary/20">
+          <CardHeader>
+            <CardTitle className="font-headline text-xl flex items-center">
+              <Lightbulb className="mr-2 h-5 w-5 text-primary" />
+              Overall AI Recommendations
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-primary-foreground/90 whitespace-pre-line">{overallTips}</p>
+          </CardContent>
+        </Card>
 
         <div className="flex gap-4">
           <Button variant="outline" asChild>
