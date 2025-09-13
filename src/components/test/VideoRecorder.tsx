@@ -78,7 +78,7 @@ export function VideoRecorder({ testSlug }: { testSlug: string }) {
             setIsProcessing(false);
             if (result.submissionId) {
                 toast({ title: "Analysis Complete!", description: "Redirecting to your results." });
-                router.push(`/results/sub-${result.submissionId}`);
+                router.push(`/results/${result.submissionId}`);
             } else {
                 toast({ title: "Analysis Failed", description: result.error, variant: "destructive" });
             }
